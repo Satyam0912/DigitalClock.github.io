@@ -14,11 +14,10 @@ body {
     font-family: cursive;
 }
 
-/* @font-face {
-    font-family: "digital-clock-font";
-    src: url("C:/Users/Desktop/Website/fonts/Harlow_Solid_Italic.ttf");
-} */
-
+@font-face {
+    font-family: "Loopy";
+    src: url("https://drive.google.com/file/d/15QGgUYSpA7583Fu7Z_EIaVBsTVbsMM-_/view?usp=sharing");
+}
 
 .disp {
     display: flex;
@@ -48,6 +47,7 @@ div.main-container {
 div.time-disp {
     height: 150px;
     width: 400px;
+    font-family: "Loopy";
 }
 
 div.date-disp{
@@ -80,6 +80,7 @@ div.date-disp{
     div.time-disp {
         height: 120px;
         width: 330px;
+        font-family: "Loopy";
     }
     
     div.date-disp {
