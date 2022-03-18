@@ -40,55 +40,57 @@
         </div>
     </div>
     <script>
-        setTimeout(function () {
-            location.reload();
-        }, 700);
-        let tme = new Date();
-        document.getElementById("hours").innerHTML = tme.getHours()%12;
-        document.getElementById("minutes").innerHTML = tme.getMinutes();
-        document.getElementById("seconds").innerHTML = tme.getSeconds();
-        document.getElementById("date").innerHTML = tme.getDate();
-        document.getElementById("year").innerHTML = tme.getFullYear();
-        
-        let wdaykey=tme.getDay();
-        const wdays = new Map([
-            [0, "Sunday"],
-            [1, "Monday"],
-            [2, "Tuesday"],
-            [3, "Wednesday"],
-            [4, "Thursday"],
-            [5, "Friday"],
-            [6, "Saturday"],
-        ]);
-        document.getElementById("day").innerHTML =wdays.get(wdaykey);
+        setInterval(() => {
 
-        let mMonthKey=tme.getMonth();
-        const mMonth = new Map([
-            [0, "JAN"],
-            [1, "FEB"],
-            [2, "MAR"],
-            [3, "APR"],
-            [4, "MAY"],
-            [5, "JUNE"],
-            [6, "JULY"],
-            [7, "AUG"],
-            [8, "SEP"],
-            [9, "OCT"],
-            [10, "NOV"],
-            [11, "DEC"]
-        ]);
-        document.getElementById("month").innerHTML = mMonth.get(mMonthKey);
+            let tme = new Date();
+            document.getElementById("hours").innerHTML = tme.getHours() % 12<10?"0"+tme.getHours() % 12:tme.getHours() % 12;
+            document.getElementById("minutes").innerHTML = tme.getMinutes()<10?"0"+tme.getMinutes():tme.getMinutes();
+            document.getElementById("seconds").innerHTML = tme.getSeconds()<10?"0"+tme.getSeconds():tme.getSeconds();
+            document.getElementById("date").innerHTML = tme.getDate();
+            document.getElementById("year").innerHTML = tme.getFullYear();
 
-        let ampm = new myAmPm();
-        function myAmPm() {
-            if (tme.getHours() >= 12) {
-                document.getElementById("AmPm").innerHTML = "PM";
+            
+
+            let wdaykey = tme.getDay();
+            const wdays = new Map([
+                [0, "Sunday"],
+                [1, "Monday"],
+                [2, "Tuesday"],
+                [3, "Wednesday"],
+                [4, "Thursday"],
+                [5, "Friday"],
+                [6, "Saturday"],
+            ]);
+            document.getElementById("day").innerHTML = wdays.get(wdaykey);
+
+            let mMonthKey = tme.getMonth();
+            const mMonth = new Map([
+                [0, "JAN"],
+                [1, "FEB"],
+                [2, "MAR"],
+                [3, "APR"],
+                [4, "MAY"],
+                [5, "JUNE"],
+                [6, "JULY"],
+                [7, "AUG"],
+                [8, "SEP"],
+                [9, "OCT"],
+                [10, "NOV"],
+                [11, "DEC"]
+            ]);
+            document.getElementById("month").innerHTML = mMonth.get(mMonthKey);
+
+            let ampm = new myAmPm();
+            function myAmPm() {
+                if (tme.getHours() >= 12) {
+                    document.getElementById("AmPm").innerHTML = "PM";
+                }
+                else {
+                    document.getElementById("AmPm").innerHTML = "AM";
+                }
             }
-            else {
-                document.getElementById("AmPm").innerHTML = "AM";
-            }
-        }
-        document.getElementById("AmPm").innerHTML = ampm.myAmPm();
+            document.getElementById("AmPm").innerHTML = ampm.myAmPm();
+        }, 1000);
     </script>
 </body>
 
