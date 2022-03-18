@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    font-family: cursive;
+}
+
+/* @font-face {
+    font-family: "digital-clock-font";
+    src: url("C:/Users/Desktop/Website/fonts/Harlow_Solid_Italic.ttf");
+} */
+
+
+.disp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div p {
+    color: white;
+    font-size: 3rem;
+}
+div.date-disp p {
+    color: white;
+    font-size: 2rem;
+}
+
+div.main-container {
+    height: 180px;
+    width: 450px;
+    border: 5px solid red;
+    border-radius: 40px;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.time-disp {
+    height: 150px;
+    width: 400px;
+}
+
+div.date-disp{
+    height: 100px;
+    width: 400px;
+}
