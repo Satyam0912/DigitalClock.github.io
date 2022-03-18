@@ -54,3 +54,46 @@ div.date-disp{
     height: 100px;
     width: 400px;
 }
+
+@media screen and (max-width:600px) {
+
+    body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: burlywood;
+        font-family: cursive;
+    }
+
+    div p {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    div.date-disp p {
+        font-size: 1.3rem;
+    }
+
+    div.time-disp {
+        height: 120px;
+        width: 330px;
+    }
+    
+    div.date-disp {
+        height: 80px;
+        width: 320px;
+    }
+
+    div.main-container {
+        height: 150px;
+        width: 350px;
+        border: 5px solid red;
+        border-radius: 40px;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
