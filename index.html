@@ -44,7 +44,7 @@
             location.reload();
         }, 700);
         let tme = new Date();
-        document.getElementById("hours").innerHTML = tme.getHours();
+        document.getElementById("hours").innerHTML = tme.getHours()%12;
         document.getElementById("minutes").innerHTML = tme.getMinutes();
         document.getElementById("seconds").innerHTML = tme.getSeconds();
         document.getElementById("date").innerHTML = tme.getDate();
