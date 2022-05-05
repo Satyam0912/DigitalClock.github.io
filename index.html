@@ -80,16 +80,7 @@
             ]);
             document.getElementById("month").innerHTML = mMonth.get(mMonthKey);
 
-            let ampm = new myAmPm();
-            function myAmPm() {
-                if (tme.getHours() >= 12) {
-                    document.getElementById("AmPm").innerHTML = "PM";
-                }
-                else {
-                    document.getElementById("AmPm").innerHTML = "AM";
-                }
-            }
-            document.getElementById("AmPm").innerHTML = ampm.myAmPm();
+            document.getElementById("AmPm").innerHTML = tme.getHours() >= 12?"PM":"AM";
         }, 1000);
     </script>
 </body>
