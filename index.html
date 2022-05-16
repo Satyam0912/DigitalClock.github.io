@@ -43,7 +43,7 @@
         setInterval(() => {
 
             let tme = new Date();
-            document.getElementById("hours").innerHTML = tme.getHours() % 12<10?"0"+tme.getHours() % 12:tme.getHours() % 12;
+            document.getElementById("hours").innerHTML = tme.getHours() % 12 == 0 ? tme.getHours() :  tme.getHours() % 12<10?"0"+tme.getHours() % 12:tme.getHours() % 12;
             document.getElementById("minutes").innerHTML = tme.getMinutes()<10?"0"+tme.getMinutes():tme.getMinutes();
             document.getElementById("seconds").innerHTML = tme.getSeconds()<10?"0"+tme.getSeconds():tme.getSeconds();
             document.getElementById("date").innerHTML = tme.getDate();
